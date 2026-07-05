@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engineering Excellence by DT</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="bg-primary text-white text-center py-5">
+        <h1 class="display-4 fw-bold">DT Engineering Solutions</h1>
+        <p class="lead">Innovation, Precision, and Reliability</p>
+    </header>
+
+    <!-- Slideshow with Side-by-Side Phrases and Forms -->
+    <section class="container-fluid p-0 my-5">
+        <div id="slideshow" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#slideshow" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#slideshow" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#slideshow" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <!-- Slide 1: Phrase on Left, Form on Right -->
+                <div class="carousel-item active">
+                    <img src="images/image1.jpg" class="d-block w-100" alt="Slide 1">
+                    <div class="content-overlay d-flex align-items-center">
+                        <div class="phrase-container col-md-6 d-flex justify-content-center align-items-center">
+                            <h2 class="animated-phrase slide-up">Engineering Excellence, Powered by DT</h2>
+                        </div>
+                        <div class="form-container col-md-6 d-flex justify-content-center align-items-center">
+                            <div class="card animated-form fade-in">
+                                <div class="card-header bg-primary text-white">
+                                    <h3 class="mb-0"><i class="fas fa-envelope me-2"></i> Contact Us</h3>
+                                </div>
+                                <div class="card-body">
+                                    <form action="process_contact.php" method="POST">
+                                        <div class="mb-3">
+                                            <label for="contactName" class="form-label">Name</label>
+                                            <input type="text" class="form-control" id="contactName" name="name" required>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="contactEmail" class="form-label">Email</label>
+                                            <input type="email" class="form-control" id="contactEmail" name="email" required>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="contactMessage" class="form-label">Message</label>
+                                            <textarea class="form-control" id="contactMessage" name="message" rows="3" required></textarea>
+                                        </div>
+                                        <button type="submit" class="btn btn-primary w-100"><i class="fas fa-paper-plane me-2"></i> Send Message</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 2: Phrase on Top, Form on Bottom -->
+                <div class="carousel-item">
+                    <img src="images/image2.jpg" class="d-block w-100" alt="Slide 2">
+                    <div class="content-overlay flex-column">
+                        <div class="phrase-container d-flex justify-content-center align-items-center mb-4">
+                            <h2 class="animated-phrase fade-in">Delivering Engineering Excellence Through DT</h2>
+                        </div>
+                        <div class="form-container d-flex justify-content-center align-items-center">
+                            <div class="card animated-form slide-in">
+                                <div class="card-header bg-success text-white">
+                                    <h3 class="mb-0"><i class="fas fa-tools me-2"></i> Service Request</h3>
+                                </div>
+                                <div class="card-body">
+                                    <form action="process_service.php" method="POST">
+                                        <div class="mb-3">
+                                            <label for="serviceName" class="form-label">Name</label>
+                                            <input type="text" class="form-control" id="serviceName" name="name" required>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="serviceType" class="form-label">Service Type</label>
+                                            <select class="form-select" id="serviceType" name="service_type" required>
+                                                <option value="" selected disabled>Select a service</option>
+                                                <option value="consulting">Consulting</option>
+                                                <option value="support">Support</option>
+                                                <option value="development">Development</option>
+                                            </select>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="serviceDetails" class="form-label">Details</label>
+                                            <textarea class="form-control" id="serviceDetails" name="details" rows="3" required></textarea>
+                                        </div>
+                                        <button type="submit" class="btn btn-success w-100"><i class="fas fa-check-circle me-2"></i> Submit Request</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 3: Phrase on Right, Form on Left -->
+                <div class="carousel-item">
+                    <img src="images/image3.jpg" class="d-block w-100" alt="Slide 3">
+                    <div class="content-overlay d-flex align-items-center">
+                        <div class="form-container col-md-6 d-flex justify-content-center align-items-center">
+                            <div class="card animated-form bounce-in">
+                                <div class="card-header bg-info text-white">
+                                    <h3 class="mb-0"><i class="fas fa-user-cog me-2"></i> Customer Request</h3>
+                                </div>
+                                <div class="card-body">
+                                    <form action="process_request.php" method="POST">
+                                        <div class="mb-3">
+                                            <label for="requestName" class="form-label">Name</label>
+                                            <input type="text" class="form-control" id="requestName" name="name" required>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="requestPriority" class="form-label">Priority</label>
+                                            <select class="form-select" id="requestPriority" name="priority" required>
+                                                <option value="" selected disabled>Select priority</option>
+                                                <option value="low">Low</option>
+                                                <option value="medium">Medium</option>
+                                                <option value="high">High</option>
+                                            </select>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="requestDescription" class="form-label">Description</label>
+                                            <textarea class="form-control" id="requestDescription" name="description" rows="3" required></textarea>
+                                        </div>
+                                        <button type="submit" class="btn btn-info w-100"><i class="fas fa-paper-plane me-2"></i> Submit Request</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="phrase-container col-md-6 d-flex justify-content-center align-items-center">
+                            <h2 class="animated-phrase drift-in">Where Engineering Excellence Meets DT</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#slideshow" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#slideshow" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4">
+        <p class="mb-0">&copy; 2026 DT Engineering. All rights reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>
